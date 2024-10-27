@@ -46,3 +46,5 @@ app.post('/api/signup',async (req,res)=>{
         res.status(500).json({message:"Server error",error })
     }
 })
+
+app.listen(5000, () => console.log("Server running on port 5000"));

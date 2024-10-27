@@ -11,7 +11,9 @@ mongoose.connect('mongodb+srv://garvit31602:garvit2002@cluster0.inhph.mongodb.ne
     })
 
 const app=express()
-app.use(cors());
+app.use(cors({
+  origin: ['https://yourfrontenddomain.com']  // Replace with actual frontend domain
+}));
 app.use(express.json());
 
 app.post("/api/login", async (req, res) => {

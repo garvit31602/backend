@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 const User=require('./models/User')
 const cors = require('cors'); 
 
-mongoose.connect('mongodb://0.0.0.0:27017/pokedb')
+mongoose.connect('mongodb+srv://garvit31602:garvit2002@cluster0.inhph.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
     console.log('mongodb connected')})
 .catch((e)=>{

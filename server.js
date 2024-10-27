@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://garvit31602:garvit2002@cluster0.inhph.mongodb.ne
 
 const app=express()
 app.use(cors({
-  origin: ['https://yourfrontenddomain.com']  // Replace with actual frontend domain
+  origin: ['https://backend-alpha-puce-22.vercel.app/api/login']  // Replace with actual frontend domain
 }));
 app.use(express.json());
 

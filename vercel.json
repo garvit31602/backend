@@ -1,1 +1,7 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" },
+    "functions": {
+      "api/*.js": {
+        "maxDuration": 30 // Set to your desired maximum duration in seconds
+      }
+    }
+  ] }

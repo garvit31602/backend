@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const User = require('./models/User');
+const User = require('../models/User');
 const cors = require('cors');
 
-mongoose.connect('your_mongodb_connection_string')
+mongoose.connect('mongodb+srv://garvit31602:garvit2002@cluster0.inhph.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     console.log('MongoDB connected');
   })

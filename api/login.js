@@ -38,4 +38,4 @@ app.post("/api/login", async (req, res) => {
 
 // Keep the same structure for the signup route
 
-app.listen(process.env.PORT || 5000, () => console.log("Server running on port 5000"));
+app.listen(5000, () => console.log("Server running on port 5000"));

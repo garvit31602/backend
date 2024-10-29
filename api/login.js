@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/api/login", async (req, res) => {
+app.post("/", async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {

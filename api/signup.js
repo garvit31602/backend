@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post('/', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
   const { username, password } = req.body;
   try {
     const userExists = await User.findOne({ username });
@@ -32,5 +32,3 @@ app.post('/', async (req, res) => {
     return res.status(500).json({ message: "Server error", error });
   }
 });
-
-app.listen(5001, () => console.log(`Server running on port 5001`));

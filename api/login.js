@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post("/", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {
@@ -36,6 +36,3 @@ app.post("/", async (req, res) => {
   }
 });
 
-// Keep the same structure for the signup route
-
-app.listen(5000, () => console.log("Server running on port 5000"));

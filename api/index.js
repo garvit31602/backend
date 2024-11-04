@@ -24,7 +24,7 @@ app.get("/api/users", async(req,res)=>{
 })
 
 app.post("/api/login", async (req, res) => {
-  console.log(req.body)
+  res.send(req.body)
   const { username, password } = req.body;
 
   if (!username || !password) {
@@ -44,7 +44,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 app.post('/api/signup', async (req, res) => {
-  console.log(req.body)
+  res.send(req.body)
     const { username, password } = req.body;
     try {
       const userExists = await User.findOne({ username });

@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const User = require('../models/User');
 const cors = require('cors');
+const port=3000
 
 mongoose.connect('mongodb+srv://garvit31602:garvit2002@cluster0.inhph.mongodb.net/pokedb?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
@@ -58,6 +59,6 @@ app.post('/api/signup', async (req, res) => {
     }
   });
 
-app.listen(3000,()=>{
-    console.log('server running')
-})
+app.listen(port,()=>console.log(`running on port ${port}`))
+
+module.exports = app;
